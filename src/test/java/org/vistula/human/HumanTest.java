@@ -2,6 +2,9 @@ package org.vistula.human;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertThat;
+
+
 public class HumanTest {
 
     @Test
@@ -41,6 +44,32 @@ public class HumanTest {
         jozek.setLastName("Nowak");
         assert jozek.getLastName() == "Nowak";
 
+    }
+    @Test
+    public void verifyAlcohol() {
+        Human janek = new Human();
+        janek.setAge(17);
+        assert janek.canBuyAlcohol() == false;
+    }
+
+  //  @Test
+   // public void verifyAlcoho3() {
+  //      Human janek = new Human();
+   //     janek.setAge(17);
+   //     assertThat(janek.canBuyAlcohol());
+   // }
+
+    @Test
+    public void verifyAlcohol2() {
+        Human janek = new Human();
+        janek.setAge(18);
+        assert janek.canBuyAlcohol() == true;
+    }
+    @Test
+    public void verifyAlcohol3() {
+        Human janek = new Human();
+        janek.setAge(19);
+        assert janek.canBuyAlcohol() == true;
     }
 
 }
