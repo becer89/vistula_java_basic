@@ -23,6 +23,7 @@ public class ArrayListTest {
         webPages.add(wp);
         webPages.add(gazeta);
 
+
     }
 
     @Test
@@ -36,10 +37,19 @@ public class ArrayListTest {
         ArrayList<WebPage> webPagesEN = new ArrayList<>();
         webPagesEN.add(onet);
         webPagesEN.add(interia);
-        webPagesEN.add(wp);
         webPagesEN.add(gazeta);
+        webPagesEN.add(wp);
 
-        assertThat(webPages).isNotEqualTo(webPagesEN);
+        assertThat(webPages).isEqualTo(webPagesEN);
     }
 
+    /*@Test
+    public void shouldBeCorrectTitle(){
+        ArrayList<WebPage> webPages = new ArrayList<>();
+        webPages.get(onet);
+        webPages.get(interia);
+
+        webPages oneFromList = webPages.get(0);
+        assertThat(oneFromList
+    }*/
 }

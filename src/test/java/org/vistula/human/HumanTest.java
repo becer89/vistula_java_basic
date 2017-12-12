@@ -1,11 +1,16 @@
 package org.vistula.human;
 
 import org.junit.Test;
-
-import static org.junit.Assert.assertThat;
+import org.vistula.webpage.WebPage;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import java.util.ArrayList;
 
 
 public class HumanTest {
+
+
+
+
 
     @Test
     public void myFirstTest() {
@@ -72,4 +77,19 @@ public class HumanTest {
         assert janek.canBuyAlcohol() == true;
     }
 
+    @Test
+    public void shouldReturnCorrectHuman(){
+        ArrayList<Human> humans = new ArrayList<>();
+        Human slawek = new Human(15, "Slawek", "Slawkowski");
+        Human jessica = new Human(11, "Jessica", "Simpson");
+        Human jurand = new Human(680, "Jurand", "Zespychowa");
+
+        humans.add(slawek);
+        humans.add(jessica);
+        humans.add(jurand);
+
+        assertThat(humans.get(0).getAge()).isEqualTo(15);
+        assertThat(humans.get(2).getLastName()).isEqualTo("Zespychowa");
+
+    }
 }

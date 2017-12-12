@@ -29,6 +29,7 @@ public class HashSetTest {
         webPagesEN.add(gazeta);
         webPagesEN.add(wp);
 
+
         assertThat(webPages).isEqualTo(webPagesEN);
     }
 

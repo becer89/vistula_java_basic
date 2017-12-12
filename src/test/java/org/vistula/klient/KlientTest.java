@@ -14,9 +14,9 @@ public class KlientTest {
 
     @Test
     public void areYouWomen2() {
-        Klient aneta = new Klient();
-        aneta.setWomen(false);
-        assert aneta.isWomenn() == false;
+        Klient jurek = new Klient();
+        jurek.setWomen(false);
+        assert jurek.isWomenn() == false;
     }
 
 
